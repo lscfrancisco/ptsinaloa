@@ -15,7 +15,6 @@ const APP_SHELL = [
 'buscar.html',
 'editar.html',
 'eliminar.html',
-'nuevo.html',
 'js/app.js',
 'js/js.js',
 'images/logo.png',
