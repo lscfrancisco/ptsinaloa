@@ -3,7 +3,7 @@
 function editar(){
 
 var id=document.getElementById("id").value;
- fetch('http://127.0.0.1/restful_pt/index.php/clientes/cliente_by_id/'+id)
+ fetch('http://api.ptsinaloa.org/index.php/clientes/cliente_by_id/'+id)
  .then( res => res.json() )
  .then( posts => {
 if(posts.err===true){
@@ -64,7 +64,7 @@ function getCliente(){
 var id=document.getElementById("id").value;
 var persona=document.getElementById("tabla");    
 
- fetch('http://127.0.0.1/restful_pt/index.php/clientes/cliente/'+id)
+ fetch('http://api.ptsinaloa.org/index.php/clientes/cliente/'+id)
  .then( res => res.json() )
  .then( posts =>{
 
@@ -90,7 +90,7 @@ swal("Error!", "No se encontraron registros!", "error");
 
  function deletePersona(){
   var id=document.getElementById("id").value;
-  fetch('http://127.0.0.1/restful_pt/index.php/clientes/cliente/'+id, { 
+  fetch('http://api.ptsinaloa.org/index.php/clientes/cliente/'+id, { 
 method: 'DELETE',
 headers: {
             'Content-Type': 'application/json'
@@ -169,7 +169,7 @@ function modificar(){
     cond_soc  : cond_soc
   };
 
-  fetch('http://127.0.0.1/restful_pt/index.php/clientes/cliente/'+id, {
+  fetch('http://api.ptsinaloa.org/index.php/clientes/cliente/'+id, {
     method: 'PUT',
     headers: {
             'Content-Type': 'application/json'
@@ -234,7 +234,7 @@ function modificar(){
     observ    :  observ,
     cond_soc  :  cond_soc
  	};
- 	fetch('http://127.0.0.1/restful_pt/index.php/clientes/cliente', {
+ 	fetch('http://api.ptsinaloa.org/index.php/clientes/cliente', {
  		method: 'POST',
  		headers: {
             'Content-Type': 'application/json'
