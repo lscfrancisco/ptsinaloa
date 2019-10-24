@@ -1,0 +1,19 @@
+{
+
+"short_name": "Pt Sin",
+"name": "PT Sinaloa",	
+"start_url": "home.html",
+"background_color": "#ffffff",
+"display" : "standalone", 
+"orientation":"portrait",
+"icons": [{
+    "src": "images/logo.png",
+    "type": "image/png",
+    "sizes": "128x128"
+  },
+{
+"src": "images/logo-144.png",
+    "type": "image/png",
+    "sizes": "144x144"	
+}]
+}

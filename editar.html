@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario PT Sinaloa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="PT Sinaloa" class="img-fluid"> </a>
+
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="nuevo.html">Nuevo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="editar.html">Editar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="eliminar.html">Eliminar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="buscar.html">Buscar</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="alert alert-info" style="text-align: center;">
+        <p>Editar Registro</p>
+        <div class="form-group">
+            <label for="nombre">ID a editar:</label>
+            <input type="text" class="form-control" id="id" name="id">
+        </div>
+        <div style="text-align: center;"><button class="btn btn-warning" onclick="editar()">Buscar</button></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" class="form-control" id="apellidos" name="apellidos">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="domicilio">Domicilio:</label>
+                    <input type="text" class="form-control" id="domicilio" name="domicilio">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="colonia">Colonia:</label>
+                    <input type="text" class="form-control" id="colonia" name="colonia"> 
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="telefono">Telefono:</label>
+                    <input type="text" class="form-control" id="telefono" name="telefono">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="text" class="form-control" id="correo" name="correo">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="usr">Ciudad:</label>
+                    <input type="text" class="form-control" id="ciudad" name="ciudad">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="municipio">Municipio</label>
+                    <input type="text" class="form-control" id="municipio" name="municipio">
+                </div>
+            </div>
+             <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="distrito">Distrito:</label>
+                    <input type="text" class="form-control" id="distrito" name="distrito">
+                </div>
+            </div>
+             <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="seccion">Seccion:</label>
+                    <input type="text" class="form-control" id="seccion" name="seccion">
+                </div>
+            </div>
+             <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="agua_p">Agua Potable:</label>
+                    <input type="text" class="form-control" id="agua_p" name="agua_p">
+                </div>
+            </div>
+             <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="alum_p">Alumbrado publico:</label>
+                    <input type="text" class="form-control" id="alum_p" name="alum_p">
+                </div>
+            </div>
+             <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="dren">Drenaje:</label>
+                    <input type="text" class="form-control" id="dren" name="dren">
+                </div>
+            </div>
+             <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="inst_sal">Instituciones de salud:</label>
+                    <input type="text" class="form-control" id="inst_sal" name="inst_sal">
+                </div>
+            </div>
+             <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="escuelas">Escuelas:</label>
+                    <input type="text" class="form-control" id="escuelas" name="escuelas">
+                </div>
+            </div>
+             <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="seguridad">Seguridad:</label>
+                    <input type="text" class="form-control" id="seguridad" name="seguridad">
+                </div>
+            </div>
+             <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="otras">Otras:</label>
+                    <input type="text" class="form-control" id="otras" name="otras">
+                </div>
+            </div>
+             <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="observ">Observaciones:</label>
+                    <input type="text" class="form-control" id="observ" name="observ">
+                </div>
+            </div>
+             <div class="col-sm-12">
+                <div class="form-group">
+                    <label for="cond_soc">Condicion Social:</label>
+                    <input type="text" class="form-control" id="cond_soc" name="cond_soc">
+                </div>
+            </div>
+                      
+            <div class="col-sm-12" style="text-align: right;">
+                <div class="form-group">
+                    <button class="btn btn-primary" onclick="modificar()">Guardar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer font-small blue" style="background-color:#1A78C3; color:#fff;">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright: PTSINALOA.COM
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/js.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
