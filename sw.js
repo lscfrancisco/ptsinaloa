@@ -6,7 +6,7 @@ importScripts('js/sw-utils.js');
 
 
 const STATIC_CACHE  	= 'static-v1';
-const DYNAMIC_CACHE 	= 'dynamic-v1';
+const DYNAMIC_CACHE 	= 'dynamic-v2';
 const INMUTABLE_CACHE 	= 'inmutable-v1';
 
 const APP_SHELL = [
@@ -18,7 +18,9 @@ const APP_SHELL = [
 'js/app.js',
 'js/js.js',
 'images/logo.png',
-'js/sw-utils.js'
+'js/sw-utils.js',
+'css/style.css'
+
 ];
 
 const APP_SHELL_INMUTABLE = [
@@ -52,6 +54,10 @@ const respuesta = caches.keys().then( keys => {
 		if( key !== STATIC_CACHE && key.includes('static') ){
 			return caches.delete(key);
 		}
+
+		  if (  key !== DYNAMIC_CACHE && key.includes('dynamic') ) {
+                return caches.delete(key);
+            }
 
 	});	
 
